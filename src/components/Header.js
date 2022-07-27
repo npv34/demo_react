@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-function Header() {
+function Header(props) {
 
     const menus = [
         {
@@ -12,11 +12,12 @@ function Header() {
             name: 'About'
         }
     ];
-    
+
     const listMenu = menus.map((item, index) => (<li className="nav-item" key={index}><a className="nav-link">{item.name}</a></li>))
 
     return (
         <div className="header">
+
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">Navbar</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +33,7 @@ function Header() {
                     </form>
                 </div>
             </nav>
+            {props.children}
         </div>
     );
 }
