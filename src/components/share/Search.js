@@ -1,7 +1,6 @@
 function Search(props) {
-
     return (
-        <input type="text" className="form-control" placeholder=""/>
+        <input onChange={props.search} type="text" className="form-control" placeholder=""/>
     )
 }
 

@@ -1,3 +1,5 @@
+import {Avatar, Button} from "@mui/material";
+
 function Table(props) {
 
     let columns = props.columns.map((column, index) => (
@@ -9,9 +11,17 @@ function Table(props) {
             <td>{index + 1}</td>
             <td>{item.name}</td>
             <td>{item.email}</td>
-            <td><img src={item.image} alt="" width="100"/></td>
-            <td>{item.active ? 'active' : 'disabled'}</td>
-            <td><label className="btn btn-primary">modify</label></td>
+            <td>
+                <Avatar
+                    alt="Remy Sharp"
+                    src={item.image}
+                    sx={{ width: 56, height: 56 }}
+                />
+            </td>
+            <td>{item.active == "1" ? 'active' : 'disabled'}</td>
+            <td>
+                <Button variant="contained">Edit</Button>
+            </td>
             <td><label className="btn btn-danger">remove</label></td>
         </tr>
     ))

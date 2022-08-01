@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import UserList from "./components/users/UserList";
+import UserAdd from "./components/users/UserAdd";
 
 function App() {
     const pageTitle = "User Manager"
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="container">
         <Header/>
+
         <UserList title={pageTitle} />
     </div>
   );
